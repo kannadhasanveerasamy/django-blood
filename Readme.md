@@ -31,7 +31,7 @@ This is a Python application designed to manage a blood bank system. It allows u
 
    python main.py
 
-2. Access the application through your web browser by visiting [http://localhost:5000](http://localhost:5000).
+2. Access the application through your web browser by visiting [http://localhost:8000](http://localhost:8000).
 
 3. Log in with your administrator credentials to access the full functionality of the blood bank system.
 
