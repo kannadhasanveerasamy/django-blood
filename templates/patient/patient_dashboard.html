@@ -1,0 +1,169 @@
+{% extends 'patient/patientbase.html' %}
+{% block content %}
+<head>
+    <style>
+            .xyz{     
+        color: blue; 
+        font-size: 3ex;   
+    }
+    .rows
+    {
+      padding: 35px;
+      
+    }
+    </style>
+</head>
+<br><br>
+<div class="container">
+
+ 
+    <div class="row" >
+      
+        <div class="col-sm-3" >
+          <div class="card bg-light" >
+              <div class="card-body" style="background-color: chocolate;">
+                  <div class="blood" >
+                    <i class="fas fa-map-marker-alt	"></i>
+                  </div><br>
+                  <div>
+                       Your location <br>
+                    <b>  {{ current_location }}</b>
+                  </div>                            
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card bg-light">
+              <div class="card-body" style="background-color: chocolate;">
+                  <div class="blood">
+                    <i class="fas fa-location-arrow	"></i>
+                  </div><br>
+                  <div>
+                       Your lattitude <br>
+                    <b>  {{ current_lattitude }} </b>
+                  </div>                            
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card bg-light">
+              <div class="card-body" style="background-color: chocolate;">
+                  <div class="blood">
+                    <i class="fas fa-location-arrow	"></i>
+                  </div><br>
+                  <div>
+                       Your longitude <br>
+                    <b>  {{ current_longitude }}</b>
+                  </div>                            
+              </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="container rows">
+      <H4 class="text-center">Blood In Blood Bank</H4><br>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="card bg-light">
+            <div class="card-body">
+                <div class="blood">
+                    <h2>A+ <i class="fas fa-tint"></i></h2>
+                </div><br><br>
+                <div>
+                    {{A1.unit}}
+                </div>                            
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card bg-light">
+                <div class="card-body">
+                    <div class="blood">
+                        <h2>B+ <i class="fas fa-tint"></i></h2>
+                    </div><br><br>
+                    <div>
+                      {{B1.unit}}
+                    </div>                            
+                </div>
+              </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card bg-light">
+                <div class="card-body">
+                    <div class="blood">
+                        <h2>O+ <i class="fas fa-tint"></i></h2>
+                    </div><br><br>
+                    <div>
+                      {{O1.unit}}
+                    </div>                            
+                </div>
+              </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card bg-light">
+                <div class="card-body">
+                    <div class="blood">
+                        <h2>AB+ <i class="fas fa-tint"></i></h2>
+                    </div><br><br>
+                    <div>
+                      {{AB1.unit}}
+                    </div>                            
+                </div>
+              </div>
+          </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="card bg-light">
+            <div class="card-body">
+                <div class="blood">
+                    <h2>A- <i class="fas fa-tint"></i></h2>
+                </div><br><br>
+                <div>
+                  {{A2.unit}}
+                </div>                            
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card bg-light">
+                <div class="card-body">
+                    <div class="blood">
+                        <h2>B- <i class="fas fa-tint"></i></h2>
+                    </div><br><br>
+                    <div>
+                      {{B2.unit}}
+                    </div>                            
+                </div>
+              </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card bg-light">
+                <div class="card-body">
+                    <div class="blood">
+                        <h2>O- <i class="fas fa-tint"></i></h2>
+                    </div><br><br>
+                    <div>
+                      {{O2.unit}}
+                    </div>                            
+                </div>
+              </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card bg-light">
+                <div class="card-body">
+                    <div class="blood">
+                        <h2>AB- <i class="fas fa-tint"></i></h2>
+                    </div><br><br>
+                    <div>
+                      {{AB2.unit}}
+                    </div>                            
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+{% endblock content %}

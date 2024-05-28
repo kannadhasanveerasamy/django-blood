@@ -1,0 +1,66 @@
+{% extends 'patient/patientbase.html' %}
+{% block content %}
+{% load widget_tweaks %}
+{%load static%}
+<head>
+    <style>
+        .label {
+     color: white;
+     padding: 8px;
+   }
+   
+   .success {background-color: #4CAF50;} /* Green */
+   .info {background-color: #2196F3;} /* Blue */
+   .warning {background-color: #ff9800;} /* Orange */
+   .danger {background-color: #f44336;} /* Red */
+   .other {background-color: #e7e7e7; color: black;} /* Gray */
+    </style>
+   </head>
+<br><br>
+<div class="container">
+    <H4 class="text-center">Donor List</H4><br>
+    <table class="table table-light table-hover table-bordered table-striped">
+        <thead class="bg-info">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Contact Number</th>
+                <th scope="col"> Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for t in donor_list %}
+            <tr>
+                
+                <td>{{t}}</td>
+                <td>{{t.address }}</td>
+                <td> {{ t.mobile }}</td>
+                <td> {{t.status}}</td>
+ 
+                <!--<td>{{t.name}}</td>
+                <td> {{t.Age}}</td>
+                
+                <td>{{t.bloodgroup}}</td>
+                <td>{{t}}</td>
+                <td>{{t.date}}</td>
+                {% if t.status == 'Approved' %}
+                <td><span class="label warning"> Approved</span></td>
+                
+                {% elif t.status == 'Rejected' %}
+                <td><span class="label success">Rejected</span></td>
+                {% else %}
+                <td><span style="color: white;margin-left: 0px;" class="label info">Pending</span></td>
+                {% endif %}
+                <td> {{t.after_donate_blood}}</td>
+                -->
+
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    
+    </table>
+</div>
+
+
+{% endblock content %}
